@@ -23,8 +23,11 @@ A sleek, responsive personal portfolio built with **Next.js**, showcasing projec
 ## 📦 Installation
 
 git clone https://github.com/coding-mrinal/portfolio_2.git
+
 cd portfolio_2
+
 npm install
+
 npm run dev
 
 
