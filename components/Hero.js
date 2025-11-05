@@ -154,7 +154,7 @@ export default function Hero() {
   </motion.div>
 
   {/* Social Links */}
-  <motion.div
+  {/* <motion.div
     variants={itemVariants}
     className="pt-6 sm:pt-8 border-t border-white/10"
   >
@@ -211,7 +211,7 @@ export default function Hero() {
         </motion.a>
       ))}
     </div>
-  </motion.div>
+  </motion.div> */}
 
   {/* Quick Stats */}
   

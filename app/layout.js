@@ -3,7 +3,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Your Name - Portfolio',
+  title: 'Portfolio - Know About Me',
   description: 'Portfolio showcasing my work and projects',
 }
 

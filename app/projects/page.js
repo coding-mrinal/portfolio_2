@@ -1,4 +1,7 @@
+"use client"
+
 import ProjectCard from '@/components/ProjectCard'
+import { motion } from 'framer-motion'
 
 export default function Projects() {
   const allProjects = [

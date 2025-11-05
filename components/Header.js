@@ -35,30 +35,11 @@ export default function Header() {
       transition={{ duration: 0.5 }}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-20">
+        <div className="flex justify-center items-center h-16 sm:h-20">
           
-          {/* Logo with Animation */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <motion.div
-              className="relative"
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.6 }}
-            >
-              {/* <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center shadow-lg">
-                <FaCode className="text-black text-lg sm:text-xl" />
-              </div> */}
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
-            </motion.div>
-            <div className="hidden sm:block">
-              <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-500 bg-clip-text text-transparent">
-                PORTFOLIO
-              </span>
-              <div className="h-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-            </div>
-          </Link>
 
           {/* Desktop Menu with Glassmorphism */}
-          <div className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white/5 backdrop-blur-md rounded-full px-2 py-2 border border-white/10">
+          <div className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white/5  rounded-full px-2 py-2 border border-white/10">
             {navItems.map((item, index) => (
               <Link 
                 key={item.name}
@@ -76,7 +57,7 @@ export default function Header() {
           </div>
 
           {/* CTA Button - Desktop */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <Link 
               href="/contact"
               className="relative inline-flex items-center px-5 lg:px-6 py-2.5 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm lg:text-base overflow-hidden group"
@@ -89,7 +70,7 @@ export default function Header() {
                 transition={{ duration: 0.3 }}
               />
             </Link>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <motion.button 
@@ -159,7 +140,7 @@ export default function Header() {
                 ))}
                 
                 {/* Mobile CTA */}
-                <motion.div
+                {/* <motion.div
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: navItems.length * 0.1 }}
@@ -172,7 +153,7 @@ export default function Header() {
                   >
                     Let's Talk
                   </Link>
-                </motion.div>
+                </motion.div> */}
               </div>
             </motion.div>
           )}
