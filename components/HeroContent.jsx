@@ -37,14 +37,14 @@ export default function HeroContent({ socialLinks }) {
     >
       {/* Main Heading */}
       <motion.h1
-        variants={itemVariants}
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-black leading-tight"
-      >
-        Hi, I'm{' '}
-        <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 bg-[length:200%_auto] bg-clip-text text-transparent font-black animate-gradient-x">
-          M.R.I.N.A.L
-        </span>
-      </motion.h1>
+  variants={itemVariants}
+  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-black leading-tight"
+>
+  Hi, I'm{' '}
+  <span className="text-white [text-shadow:0_0_5px_#fff,0_0_10px_#22d3ee,0_0_15px_#22d3ee,0_0_20px_#22d3ee] hover:[text-shadow:0_0_10px_#fff,0_0_20px_#22d3ee,0_0_30px_#22d3ee,0_0_40px_#22d3ee] transition-all duration-500">
+    M.R.I.N.A.L
+  </span>
+</motion.h1>
 
       <motion.p
         variants={itemVariants}

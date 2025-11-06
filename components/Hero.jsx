@@ -6,9 +6,9 @@ import HeroContent from './HeroContent';
 export default function Hero() {
   // Static data that doesn't need reactivity
   const codeContent = `const developer = {
-  name: "Your Name",
+  name: "Mrinal Mahapatra",
   role: "Full-Stack Developer",
-  location: "Your City",
+  location: "Kolkata, India",
   
   skills: {
     frontend: ["React", "Next.js"],
@@ -16,15 +16,17 @@ export default function Hero() {
     tools: ["Git", "Docker", "AWS"]
   },
   
-  experience: "3+ years",
-  
   passion: [
     "Building scalable apps",
     "Clean code",
     "User-centric design"
   ],
+
+  hobbies: [
+    "Reading Books",
+    "Drawing",
+  ]
   
-  available: true
 };`;
 
   const socialLinks = [
