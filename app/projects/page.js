@@ -117,7 +117,7 @@ export default function Projects() {
     initial={{ opacity: 0, scale: 0.9 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.8 }}
-    className="relative p-2 sm:p-3 bg-black/40 rounded-xl sm:rounded-2xl border-2 border-cyan-400 shadow-[0_0_50px_rgba(34,211,238,0.9)]"
+    className="relative p-2 sm:p-3 bg-black/40 rounded-xl sm:rounded-2xl border-2 border-cyan-400 shadow-[0_0_50px_rgba(34,211,238,1)]"
   >
 
     {/* LED Border Effect */}

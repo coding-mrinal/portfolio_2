@@ -1,6 +1,5 @@
 import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Header from '@/components/Header/Header'
 
 export const metadata = {
   title: 'Portfolio - Know About Me',

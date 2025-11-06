@@ -1,6 +1,6 @@
 // app/contact/page.jsx
-import ContactForm from '@/components/ContactForm'
-import ContactInfo from '@/components/ContactInfo'
+import ContactForm from '@/components/Contact/ContactForm'
+import ContactInfo from '@/components/Contact/ContactInfo'
 
 
 export default function Contact() {
