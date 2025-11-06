@@ -2,11 +2,13 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaCode, FaTimes, FaBars } from 'react-icons/fa'
+import { FaTimes, FaBars } from 'react-icons/fa'
+import { usePathname } from 'next/navigation'
 
-export default function Header() {
+export default function HeaderClient({ navItems }) {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,18 +18,18 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Contact', href: '/contact' }
-  ]
+  const isActive = (href) => {
+    if (href === '/') {
+      return pathname === '/'
+    }
+    return pathname.startsWith(href)
+  }
 
   return (
     <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-gray-900/95 backdrop-blur-lg shadow-lg shadow-purple-500/10' 
+          ? 'bg-black/80 backdrop-blur-lg shadow-lg shadow-blue-500/10' 
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -37,44 +39,41 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center items-center h-16 sm:h-20">
           
-
-          {/* Desktop Menu with Glassmorphism */}
-          <div className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white/5  rounded-full px-2 py-2 border border-white/10">
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-black/30 rounded-full px-2 py-2 border border-gray-700">
             {navItems.map((item, index) => (
               <Link 
                 key={item.name}
                 href={item.href} 
-                className="relative px-4 lg:px-6 py-2 text-white/80 hover:text-white transition-all duration-300 rounded-full group"
+                className="relative px-4 lg:px-6 py-2 text-gray-300 hover:text-white transition-all duration-300 rounded-full group"
               >
-                <span className="relative z-10 font-medium text-sm lg:text-base">{item.name}</span>
+                <span className={`relative z-10 font-medium text-sm lg:text-base ${
+                  isActive(item.href) ? 'text-white' : ''
+                }`}>
+                  {item.name}
+                </span>
+                
+                {/* Active state background */}
+                {isActive(item.href) && (
+                  <motion.div
+                    className="absolute inset-0 bg-white/10 rounded-full border border-white/20"
+                    layoutId="activeBackground"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
+                )}
+                
+                {/* Hover background */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
                   whileHover={{ scale: 1.05 }}
                 />
-                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 group-hover:w-3/4 transition-all duration-300"></div>
               </Link>
             ))}
           </div>
 
-          {/* CTA Button - Desktop */}
-          {/* <div className="hidden md:block">
-            <Link 
-              href="/contact"
-              className="relative inline-flex items-center px-5 lg:px-6 py-2.5 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm lg:text-base overflow-hidden group"
-            >
-              <span className="relative z-10">Let's Talk</span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-400"
-                initial={{ x: '100%' }}
-                whileHover={{ x: 0 }}
-                transition={{ duration: 0.3 }}
-              />
-            </Link>
-          </div> */}
-
           {/* Mobile Menu Button */}
           <motion.button 
-            className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-lg bg-white/10 backdrop-blur-md border border-white/20"
+            className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-lg bg-black/30 backdrop-blur-md border border-gray-600"
             onClick={() => setIsOpen(!isOpen)}
             whileTap={{ scale: 0.95 }}
           >
@@ -114,7 +113,7 @@ export default function Header() {
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="py-4 space-y-1 bg-gray-800/50 backdrop-blur-md rounded-2xl mt-4 border border-white/10 px-4">
+              <div className="py-4 space-y-1 bg-black/50 backdrop-blur-md rounded-2xl mt-4 border border-gray-700 px-4">
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item.name}
@@ -124,36 +123,27 @@ export default function Header() {
                   >
                     <Link 
                       href={item.href} 
-                      className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium"
+                      className={`block px-4 py-3 rounded-lg transition-all duration-300 font-medium ${
+                        isActive(item.href) 
+                          ? 'bg-white/10 text-white border border-white/20' 
+                          : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      }`}
                       onClick={() => setIsOpen(false)}
                     >
                       <div className="flex items-center justify-between">
                         <span>{item.name}</span>
-                        <motion.div
-                          className="w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-500"
-                          whileHover={{ width: 20 }}
-                          transition={{ duration: 0.2 }}
-                        />
+                        {isActive(item.href) && (
+                          <motion.div
+                            className="w-2 h-2 bg-blue-400 rounded-full"
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 0.3 }}
+                          />
+                        )}
                       </div>
                     </Link>
                   </motion.div>
                 ))}
-                
-                {/* Mobile CTA */}
-                {/* <motion.div
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: navItems.length * 0.1 }}
-                  className="pt-3"
-                >
-                  <Link
-                    href="/contact"
-                    className="block w-full text-center px-4 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Let's Talk
-                  </Link>
-                </motion.div> */}
               </div>
             </motion.div>
           )}
@@ -162,7 +152,7 @@ export default function Header() {
 
       {/* Animated bottom border */}
       <motion.div 
-        className="h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"
+        className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: scrolled ? 1 : 0 }}
         transition={{ duration: 0.5 }}
