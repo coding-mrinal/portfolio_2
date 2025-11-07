@@ -10,8 +10,8 @@ import Image from 'next/image';
 
 export default function ProfileCard() {
   return (
-    <div className="relative group">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
+    <div className="relative group bg-black/50">
+      <div className="absolute inset-0 "></div>
 
       <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
         <div className="text-center mb-5">
@@ -33,7 +33,7 @@ export default function ProfileCard() {
           <p className="text-cyan-300 text-sm">Full-Stack Developer</p>
         </div>
 
-        <div className="space-y-2.5 border-t border-white/10 pt-5">
+        <div className="space-y-2.5 border-t border-white/10 pt-5 ">
           {[
             { icon: FaMapMarkerAlt, text: "Kolkata, India", color: "cyan" },
             {

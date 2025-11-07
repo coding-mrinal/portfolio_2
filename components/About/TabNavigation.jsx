@@ -14,7 +14,7 @@ export default function TabNavigation({ activeTab, setActiveTab }) {
   ];
 
   return (
-    <div className="bg-white/5 border border-white/10 rounded-2xl p-3">
+    <div className="bg-black/40">
       <div className="space-y-2">
         {tabs.map((tab) => (
           <button

@@ -56,7 +56,9 @@ export default function HeaderClient({ navItems }) {
                 {/* Active state background */}
                 {isActive(item.href) && (
                   <motion.div
-                    className="absolute inset-0 bg-white/10 rounded-full border border-white/20"
+                    className="absolute inset-0 rounded-full border-2 border-green-400/80
+shadow-[0_0_15px_5px_rgba(74,222,128,0.6)]
+animate-[flicker_3s_ease-in-out_infinite]"
                     layoutId="activeBackground"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
@@ -64,7 +66,7 @@ export default function HeaderClient({ navItems }) {
                 
                 {/* Hover background */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute inset-0 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
                   whileHover={{ scale: 1.05 }}
                 />
               </Link>
@@ -151,12 +153,12 @@ export default function HeaderClient({ navItems }) {
       </nav>
 
       {/* Animated bottom border */}
-      <motion.div 
+      {/* <motion.div 
         className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: scrolled ? 1 : 0 }}
         transition={{ duration: 0.5 }}
-      />
+      /> */}
     </motion.header>
   )
 }
