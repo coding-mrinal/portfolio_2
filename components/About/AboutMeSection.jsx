@@ -4,7 +4,7 @@ export default function AboutMeSection() {
   return (
     <div className="space-y-4">
       <p className="text-gray-300 leading-relaxed">
-        Hello! I'm a passionate full-stack developer with a love for creating beautiful, 
+        Hello! I'm a passionate developer with a love for creating beautiful, 
         functional web applications. My journey in tech started 3+ years ago, and I haven't 
         looked back since.
       </p>
@@ -13,8 +13,7 @@ export default function AboutMeSection() {
         and Next.js. Clean code, user experience, and performance optimization are my top priorities.
       </p>
       <p className="text-gray-300 leading-relaxed">
-        When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-        projects, or enjoying a good cup of coffee while reading tech blogs.
+        When I'm not coding, you'll find me exploring new technologies, sketching ideas , or enjoying a good cup of coffee while reading tech blogs.
       </p>
     </div>
   );

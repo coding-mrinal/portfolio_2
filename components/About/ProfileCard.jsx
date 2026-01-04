@@ -30,7 +30,7 @@ export default function ProfileCard() {
           <h2 className="text-2xl font-black mb-1 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
             M.R.I.N.A.L
           </h2>
-          <p className="text-cyan-300 text-sm">Full-Stack Developer</p>
+          <p className="text-cyan-300 text-sm">Software Developer</p>
         </div>
 
         <div className="space-y-2.5 border-t border-white/10 pt-5 ">
@@ -41,7 +41,7 @@ export default function ProfileCard() {
               text: "mrinalmahapatra2004@gmail.com",
               color: "purple",
             },
-            { icon: FaCalendar, text: "Available for work", color: "emerald" },
+            //{ icon: FaCalendar, text: "Available for work", color: "emerald" },
             { icon: FaHeart, text: "Open to opportunities", color: "rose" },
           ].map((item, index) => (
             <div

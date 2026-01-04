@@ -9,24 +9,21 @@ export default function Hero() {
   name: "Mrinal Mahapatra",
   role: "Full-Stack Developer",
   location: "Kolkata, India",
-  
   skills: {
     frontend: ["React", "Next.js"],
     backend: ["Node.js", "Python"],
-    tools: ["Git", "Docker", "AWS"]
+    tools: ["Git", "GitHub"]
   },
-  
   passion: [
     "Building scalable apps",
     "Clean code",
     "User-centric design"
   ],
-
   hobbies: [
     "Reading Books",
     "Drawing",
+    "Photography"
   ]
-  
 };`;
 
   const socialLinks = [

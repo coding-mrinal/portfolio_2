@@ -12,9 +12,9 @@ export default function Contact() {
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Let's Connect
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          {/* <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Have a project in mind or just want to chat? I'd love to hear from you.
-          </p>
+          </p> */}
         </div>
 
         {/* Main Content Grid */}

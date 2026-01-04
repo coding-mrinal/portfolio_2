@@ -18,7 +18,7 @@ export default function EducationSection() {
             </div>
             <div>
               <h4 className="text-white font-bold text-base md:text-lg mb-1">B.Tech in Computer Science Engineering</h4>
-              <p className="text-purple-400 text-xs md:text-sm mb-1">Guru Nanak Institute of Technology • 2022-2026</p>
+              <p className="text-cyan-200 text-xs md:text-sm mb-1">Guru Nanak Institute of Technology • 2022-2026</p>
               <p className="text-gray-400 text-xs md:text-sm">Focused on Software Engineering and Web Development</p>
             </div>
           </div>
@@ -28,8 +28,8 @@ export default function EducationSection() {
             </div>
             <div>
               <h4 className="text-white font-bold text-base md:text-lg mb-1">Secondary, Higher Secondary</h4>
-              <p className="text-purple-400 text-xs md:text-sm mb-1">BBIT Public School • 2022</p>
-              <p className="text-gray-400 text-xs md:text-sm">Focused on Software Engineering and Web Development</p>
+              <p className="text-cyan-200 text-xs md:text-sm mb-1">BBIT Public School • 2022</p>
+              <p className="text-gray-400 text-xs md:text-sm">Focused on Academic Excellence</p>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function EducationSection() {
       >
         <h4 className="text-white font-bold mb-3 text-base md:text-lg">Certifications & Courses</h4>
         <ul className="space-y-2">
-          {['Advanced React & Next.js', 'Node.js Certification', 'AWS Cloud Practitioner', 'UI/UX Design Fundamentals'].map((cert, index) => (
+          {['Coursera - Dara Structures (2024)', 'NPTEL - Artificial Intelligence: Search Methods For Problem Solving (2024), Soft Computing (2025)', 'IBM - Web Development Fundamentals (2025)', 'MongoDB University - CRUD Operations in MongoDB (2025)'].map((cert, index) => (
             <li key={index} className="flex items-center gap-2 text-gray-300 text-xs md:text-sm">
               <div className="w-1.5 h-1.5 rounded-full bg-cyan-400"></div>
               {cert}
