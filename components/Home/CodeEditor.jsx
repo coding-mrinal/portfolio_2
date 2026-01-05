@@ -24,7 +24,7 @@ export default function CodeEditor({ codeContent }) {
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="flex items-center justify-center lg:justify-end order-1 lg:order-2"
+      className="flex items-center justify-center lg:justify-end order-2 lg:order-2"
     >
       <div className="w-full max-w-xl lg:max-w-2xl">
         <div className="rounded-xl border border-purple-400/20 bg-gray-900/55 shadow-2xl overflow-hidden">

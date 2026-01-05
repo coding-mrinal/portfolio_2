@@ -19,7 +19,7 @@ export default function ProfileCard() {
             {/* <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full blur-lg opacity-50"></div> */}
             <div className="relative w-24 h-24 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-full flex items-center justify-center border-4 border-white/10 overflow-hidden">
               <Image
-                src="/profile.jpeg"
+                src="/profile2.jpg"
                 alt="Profile Photo"
                 width={96}
                 height={96}

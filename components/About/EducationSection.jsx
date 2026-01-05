@@ -41,9 +41,9 @@ export default function EducationSection() {
         transition={{ delay: 0.1 }}
         className="bg-white/5 border border-white/10 rounded-xl p-5"
       >
-        <h4 className="text-white font-bold mb-3 text-base md:text-lg">Certifications & Courses</h4>
+        <h4 className="text-white font-bold mb-3 text-base md:text-lg">Certifications & Badges</h4>
         <ul className="space-y-2">
-          {['Coursera - Dara Structures (2024)', 'NPTEL - Artificial Intelligence: Search Methods For Problem Solving (2024), Soft Computing (2025)', 'IBM - Web Development Fundamentals (2025)', 'MongoDB University - CRUD Operations in MongoDB (2025)'].map((cert, index) => (
+          {['Coursera - Dara Structures (2024)', 'NPTEL - Artificial Intelligence: Search Methods For Problem Solving (2024)', 'NPTEL - Soft Computing (2025)', 'IBM - Web Development Fundamentals (2025)', 'MongoDB University - CRUD Operations in MongoDB (2025)'].map((cert, index) => (
             <li key={index} className="flex items-center gap-2 text-gray-300 text-xs md:text-sm">
               <div className="w-1.5 h-1.5 rounded-full bg-cyan-400"></div>
               {cert}

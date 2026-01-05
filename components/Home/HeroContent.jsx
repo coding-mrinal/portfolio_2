@@ -33,7 +33,7 @@ export default function HeroContent({ socialLinks }) {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="flex flex-col justify-center space-y-3 sm:space-y-2 lg:pr-6 order-2 lg:order-1"
+      className="flex flex-col justify-center space-y-3 sm:space-y-2 lg:pr-6 order-1 lg:order-1"
     >
       {/* Main Heading */}
       <motion.h1
@@ -68,7 +68,7 @@ export default function HeroContent({ socialLinks }) {
         <motion.div variants={itemVariants} className="w-full xs:w-auto">
           <Link 
             href="/projects" 
-            className="group inline-flex items-center justify-center w-full xs:w-auto border-2 border-cyan-400 bg-cyan-400/10 text-cyan-300 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-sm sm:text-base shadow-lg hover:shadow-cyan-500/25 hover:bg-cyan-400/20 transition-all duration-300 hover:scale-105"
+            className="group inline-flex items-center justify-center w-full xs:w-auto border-2 border-cyan-400 bg-cyan-400/30 text-cyan-100 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-sm sm:text-base shadow-lg hover:shadow-cyan-500/25 hover:bg-cyan-400/20 transition-all duration-300 hover:scale-105"
           >
             View My Work
             <FaArrowRight className="ml-3 text-sm group-hover:translate-x-1.5 transition-transform duration-300" />
@@ -79,7 +79,7 @@ export default function HeroContent({ socialLinks }) {
           <Link 
             href="/resume.pdf" 
             target="_blank"
-            className="group inline-flex items-center justify-center w-full xs:w-auto border-2 border-emerald-400/50 bg-emerald-400/5 text-emerald-300 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-sm sm:text-base shadow-lg hover:shadow-emerald-500/20 hover:bg-emerald-400/10 hover:border-emerald-400 transition-all duration-300 hover:scale-105"
+            className="group inline-flex items-center justify-center w-full xs:w-auto border-2 border-emerald-400/50 bg-emerald-400/30 text-emerald-100 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-sm sm:text-base shadow-lg hover:shadow-emerald-500/20 hover:bg-emerald-400/10 hover:border-emerald-400 transition-all duration-300 hover:scale-105"
           >
             <FaFileDownload className="mr-3 text-sm group-hover:scale-110 transition-transform duration-300" />
             Resume
@@ -89,7 +89,7 @@ export default function HeroContent({ socialLinks }) {
         <motion.div variants={itemVariants} className="w-full xs:w-auto">
           <Link 
             href="/contact" 
-            className="group inline-flex items-center justify-center w-full xs:w-auto border-2 border-purple-400/50 bg-purple-400/5 text-purple-300 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-sm sm:text-base shadow-lg hover:shadow-purple-500/20 hover:bg-purple-400/10 hover:border-purple-400 transition-all duration-300 hover:scale-105"
+            className="group inline-flex items-center justify-center w-full xs:w-auto border-2 border-purple-400/50 bg-purple-400/30 text-purple-100 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-sm sm:text-base shadow-lg hover:shadow-purple-500/20 hover:bg-purple-400/10 hover:border-purple-400 transition-all duration-300 hover:scale-105"
           >
             Get In Touch
           </Link>
